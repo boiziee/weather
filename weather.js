@@ -9,11 +9,15 @@ $(function() {
     window.data = data;
     
     // Put your code here. Don't change any other code in this file. You will be sad.
-    var markup = "Today's weather is " + data.currently.summary + " and the current temperature is " + data.currently.apparentTemperature + "°F." + "<br>" + "<br>" + 
-    "Daily forecast" + "<br>" + 
+    var markup = "Today's weather is " + data.currently.summary + " and the current temperature is " + data.currently.apparentTemperature + "°F." + 
+    " Humidity level is " + data.currently.humidity + " and " + " the wind speed is " + data.currently.windSpeed + "." + "<br>" + "<br>" + 
+
+    "Next three days' daily forecast is following." + "<br>" + 
     "- Day 1 : " + data.daily.data["1"].icon + "<br>" + 
     "- Day 2 : " + data.daily.data["2"].icon + "<br>" + 
-    "- Day 3 : " + data.daily.data["3"].icon 
+    "- Day 3 : " + data.daily.data["3"].icon + "<br>" + "<br>" + 
+
+    "For more information, please visit Forecast.io." 
 
 
         //var markup = "<p>The weather report... " + "will be here when I finish my homework.</p>";
